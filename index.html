@@ -12,8 +12,8 @@
   <meta property="og:type" content="website" />
   <style>
     :root{
-      --bg:#0b0f1a;
-      --bg-raised:#121829;
+      --bg:#3b2a20;
+      --bg-raised:#3b2a20;
       --fg:#e6e8ee;
       --muted:#b7becd;
       --brand:#f5bf42; /* gold */
@@ -35,6 +35,7 @@
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
       overflow-x:hidden;
+    }
     }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
@@ -73,14 +74,16 @@
     }
     h1{
       font-size:clamp(1.9rem, 4vw + .8rem, 3.2rem);
-      line-height:1.1; margin:0 0 .6rem;
+      line-height:1.1;
+      margin:0 0 .6rem;
+      color: #ffd700;
     }
-    .lead{color:var(--muted); font-size:clamp(1rem, 1.2vw + .4rem, 1.2rem); max-width:820px; margin:0 auto 1.2rem}
+    .lead{color: #ffd700; font-size:clamp(1rem, 1.2vw + .4rem, 1.2rem); max-width:820px; margin:0 auto 1.2rem}
     .cta-row{display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; margin-top:1rem}
     .btn{
       display:inline-flex; align-items:center; gap:.5rem; font-weight:700;
-      padding:.9rem 1.1rem; border-radius:999px; border:1px solid rgba(255,255,255,.12);
-      background:linear-gradient(180deg, #1a2238, #121829);
+      padding:.9rem 1.1rem; border-radius:999px; border:1px solid #ffd700;
+      background:#3b2a20;
       color:white; text-decoration:none; box-shadow: 0 10px 35px rgba(0,0,0,.35);
       transition: transform .06s ease;
     }
@@ -88,8 +91,13 @@
     .btn.alt{background:transparent}
 
     .ribbon{
-      display:inline-block; margin:18px auto 0; padding:.35rem .7rem; border-radius:999px;
-      background:rgba(245,191,66,.15); color:#ffe6a6; border:1px solid rgba(245,191,66,.35);
+      display:inline-block;
+      margin:18px auto 0;
+      padding:.35rem .7rem;
+      border-radius:999px;
+      background:rgba(245,191,66,1);
+      color:#3b2a20 !important;
+      border:1px solid rgba(245,191,66,.35);
       font-size:.9rem;
     }
 
@@ -102,13 +110,13 @@
     @media (max-width: 640px){ .grid{grid-template-columns: 1fr;} }
 
     .card{
-      background:linear-gradient(180deg, #121829, #0e1425);
-      border:1px solid rgba(255,255,255,.08);
+      background: #3b2a20;
+      border:1px solid #ffd700;
       border-radius:18px; padding:18px;
       box-shadow: 0 15px 40px rgba(0,0,0,.35);
     }
-    .card h3{margin:.2rem 0 .4rem; font-size:1.1rem}
-    .card p{margin:0; color:var(--muted)}
+    .card h3{margin:.2rem 0 .4rem; font-size:1.1rem; color: #ffd700;}
+    .card p{margin:0; color: #ffd700}
 
     .two-col{display:grid; gap:22px; grid-template-columns: 1.2fr 1fr; align-items:center;}
     @media (max-width: 900px){ .two-col{grid-template-columns:1fr;} }
@@ -122,9 +130,9 @@
     }
     .imgbox svg{width:70%; height:auto; opacity:.9}
 
-    .kicker{letter-spacing:.12em; text-transform:uppercase; font-weight:800; color:#a7b1c6; font-size:.8rem;}
+    .kicker{letter-spacing:.12em; text-transform:uppercase; font-weight:800; color:#ffd700; font-size:.8rem;}
 
-    .features .card{display:flex; gap:12px; align-items:flex-start}
+    .features .card{display:flex; gap:12px; align-items:flex-start; color: #ffd700;}
     .dot{width:10px;height:10px;border-radius:50%; background:var(--brand); margin-top:8px; flex:0 0 auto}
 
     .contact form{
@@ -141,15 +149,17 @@
 
     @media (prefers-color-scheme: light){
       :root{ --bg:#fafbff; --bg-raised:#fff; --fg:#101321; --muted:#475569; --card:#fff;}
-      body{ background: radial-gradient(800px 400px at 80% -10%, rgba(42,169,255,.12), rgba(255,255,255,0)), linear-gradient(180deg, #ffffff, #f6f8ff); }
+      body{ background: #3b2a20, rgba(255,255,255,0)), linear-gradient(180deg, #ffffff, #f6f8ff); }
       header{ background-color: rgba(255,255,255,.8); }
-      .card{ background: #ffffff; }
+      .card{ background: #3b2a20; }
       .btn{ background: linear-gradient(180deg, #f8fafc, #eef2ff); color:#0b0f1a; }
       .btn.alt{ background: transparent; }
       input, textarea{ background:#fff; }
     }
     small.mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.8rem; opacity:.75;}
   </style>
+
+
 </head>
 <body>
   <header>
@@ -161,11 +171,13 @@
       <nav>
         <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu ▾</button>
         <ul id="menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experiences">Experiences</a></li>
-          <li><a href="#classroom">Classroom</a></li>
-          <li><a href="#partners">Partners</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#top">IDaH</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#values">Kerneværdier</a></li>
+          <li><a href="#targetgroup">Målgruppe</a></li>
+          <li><a href="#goals">Målsætning</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
     </div>
@@ -173,22 +185,46 @@
 
   <section class="hero container" id="top">
     <span class="ribbon">Interactive History of Denmark</span>
-    <h1>Bringing Denmark’s past to life — one playable story at a time.</h1>
-    <p class="lead">IDaH is a growing ecosystem of bite‑sized historical experiences for the public, schools, and museums. Play in the browser, or dive deeper with downloadable versions. Track progress, compete in classrooms, and explore authentic events with modern game design.</p>
+    <h1>Interaktiv Danmarkshistorie - Historie du kan spille!.</h1>
+    <p class="lead">Interaktiv Danmarkshistorie gør historien levende ved at forvandle danske historiske begivenheder til spændende interaktive oplevelser og digitale online minispil..</p>
     <div class="cta-row">
       <a class="btn" href="#experiences">Explore Experiences</a>
-      <a class="btn alt" href="#contact">Get Involved</a>
+      <a class="btn alt" href="#contact">Vær med!</a>
     </div>
     <div style="margin-top:10px;"><small class="mono">One‑pager template • Fully responsive</small></div>
   </section>
 
-  <section class="container two-col" id="about" aria-labelledby="about-title">
+  <section class="container two-col" id="mission" aria-labelledby="mission-title">
     <div>
-      <div class="kicker">About</div>
-      <h2 id="about-title">What is IDaH?</h2>
-      <p>Interactive History of Denmark (IDaH) is a platform that gamifies historical topics — from the oldest Danish bicycle to early aviation, Viking logistics, and more. Each module can run in a web browser as a lightweight experience or as a richer downloadable version for museums and classrooms.</p>
+      <div class="kicker">Mission</div>
+      <h2 style="color: #ffd700;" id="about-title">Hvad er vores mission?</h2>
+      <p style="color: #ffd700;">At gøre Danmarks historie tilgængelig, engagerende og interaktiv for alle – og forvandle historien om Danmark til levende og legende læring.</p>
       <div class="features" style="margin-top:14px">
-        <div class="card"><div class="dot"></div><div><h3>Fast to try</h3><p>Click and play in the browser — no installs for the lightweight tier.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Mission Statement 1</h3><p>Click and play in the browser — no installs for the lightweight tier.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Mission statement 2</h3><p>Teachers can assemble task lists, track scores, and spark friendly competition.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Mission statement 3</h3><p>Local, curated builds for on‑site kiosks — with sponsorship credits.</p></div></div>
+      </div>
+    </div>
+    <div class="imgbox" aria-hidden="true">
+      <!-- Simple placeholder illustration -->
+      <svg viewBox="0 0 800 400" role="img" aria-label="Silhouette illustration">
+        <rect x="0" y="0" width="800" height="400" fill="none" stroke="currentColor" opacity="0.15"/>
+        <circle cx="240" cy="250" r="60" fill="currentColor" opacity=".1"/>
+        <circle cx="420" cy="210" r="90" fill="currentColor" opacity=".12"/>
+        <rect x="140" y="280" width="520" height="10" fill="currentColor" opacity=".18"/>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="22" fill="currentColor" opacity=".45">Add your own image here</text>
+      </svg>
+    </div>
+  </section>
+
+
+  <section class="container two-col" id="vision" aria-labelledby="vision-title">
+    <div>
+      <div class="kicker">Vision</div>
+      <h2 style="color: #ffd700;" id="about-title">Hvad er vores vision?</h2>
+      <p style="color: #ffd700;">Vi ser for os, at Danmarks historie bliver en dynamisk oplevelse, der forbinder generationer og vækker nysgerrighed om vores fælles kulturelle stamtræ på tværs af samfundet..</p>
+      <div class="features" style="margin-top:14px">
+        <div class="card"><div class="dot"></div><div><h3>Fast to try -- THIS IS BULLET POINT STYLE LAYOUT</h3><p>Click and play in the browser — no installs for the lightweight tier.</p></div></div>
         <div class="card"><div class="dot"></div><div><h3>Classroom‑ready</h3><p>Teachers can assemble task lists, track scores, and spark friendly competition.</p></div></div>
         <div class="card"><div class="dot"></div><div><h3>Museum‑friendly</h3><p>Local, curated builds for on‑site kiosks — with sponsorship credits.</p></div></div>
       </div>
@@ -205,10 +241,35 @@
     </div>
   </section>
 
+  <section class="container two-col" id="values" aria-labelledby="values-title">
+    <div>
+      <div class="kicker">Kerneværdier</div>
+      <h2 style="color: #ffd700;" id="about-title">Hvad er vores kerneværdier?</h2>
+      <p style="color: #ffd700;">Her kan der lige skrives en kort opsummerende tekst og kerneværdierne..</p>
+      <div class="features" style="margin-top:14px">
+        <div class="card"><div class="dot"></div><div><h3>Tilgængelighed</h3><p>Hvordan vil vi sikre tilgængeligheden.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Pædagogisk innovation</h3><p>Teachers can assemble task lists, track scores, and spark friendly competition.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Fællesskab og samarbejde</h3><p>Local, curated builds for on‑site kiosks — with sponsorship credits.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Historisk nøjagtighed</h3><p>Local, curated builds for on‑site kiosks — with sponsorship credits.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Bæredygtighed</h3><p>Local, curated builds for on‑site kiosks — with sponsorship credits.</p></div></div>
+      </div>
+    </div>
+    <div class="imgbox" aria-hidden="true">
+      <!-- Simple placeholder illustration -->
+      <svg viewBox="0 0 800 400" role="img" aria-label="Silhouette illustration">
+        <rect x="0" y="0" width="800" height="400" fill="none" stroke="currentColor" opacity="0.15"/>
+        <circle cx="240" cy="250" r="60" fill="currentColor" opacity=".1"/>
+        <circle cx="420" cy="210" r="90" fill="currentColor" opacity=".12"/>
+        <rect x="140" y="280" width="520" height="10" fill="currentColor" opacity=".18"/>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="22" fill="currentColor" opacity=".45">Add your own image here</text>
+      </svg>
+    </div>
+  </section>
+
   <section class="container" id="experiences" aria-labelledby="exp-title">
     <div class="kicker">Experiences</div>
-    <h2 id="exp-title">Playable history, built to scale</h2>
-    <p class="lead" style="text-align:left;max-width:800px">Pick from lightweight browser demos or full simulations. Here are example “cards” you can edit or duplicate.</p>
+    <h2 style="color: #ffd700;" id="exp-title">Playable history, built to scale</h2>
+    <p style="color: #ffd700;" class="lead" style="text-align:left;max-width:800px">Pick from lightweight browser demos or full simulations. Here are example “cards” you can edit or duplicate.</p>
     <div class="grid" style="margin-top:14px">
       <div class="card">
         <h3>Velocipede Race (2D Silhouette)</h3>
@@ -250,13 +311,38 @@
     </div>
   </section>
 
-  <section class="container" id="partners" aria-labelledby="partners-title">
-    <div class="kicker">Partners</div>
-    <h2 id="partners-title">A shared ecosystem</h2>
+  <section class="container" id="targetgroup" aria-labelledby="targetgroup-title">
+    <div class="kicker">Målgruppe</div>
+    <h2 style="color: #ffd700;" id="partners-title">Hvem får gavn?</h2>
     <div class="grid">
-      <div class="card"><h3>Museums</h3><p>On‑site builds + sponsorship recognition + links from the global map.</p></div>
-      <div class="card"><h3>Municipalities</h3><p>Local history showcases to drive visits and community pride.</p></div>
-      <div class="card"><h3>Researchers</h3><p>Bring studies to life via interactive, citation‑friendly experiences.</p></div>
+      <div class="card"><h3>Skoler</h3><p>Inspirerer elever gennem spilbaseret læring, klassekonkurrencer og interaktive opgaver.</p></div>
+      <div class="card"><h3>Museer</h3><p>Beriger fysiske udstillinger med digitale oplevelser, der styrker gæsternes forståelse.</p></div>
+      <div class="card"><h3>Offentligheden</h3><p>Tilbyder tilgængeligt underholdning, historisk udforskning og mulighed for livslang læring.</p></div>
+      <div class="card"><h3>Forskere og historikere</h3><p>Giver nye veje til at formidle viden og skabe offentlig interesse.</p></div>
+    </div>
+  </section>
+
+    <section class="container two-col" id="goals" aria-labelledby="goals-title">
+    <div>
+      <div class="kicker">Målsætning</div>
+      <h2 style="color: #ffd700;" id="about-title">Hvad er vores mål?</h2>
+      <p style="color: #ffd700;"> Vi vil øge vores fælles historiske bevidsthed, fremme livslang læring og styrke kulturelle bånd gennem en meningsfuld leg.</p>
+      <div class="features" style="margin-top:14px">
+        <div class="card"><div class="dot"></div><div><h3>Digital platform</h3><p>Opbygge en omfattende digital platform af interaktive historiske oplevelser.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Skoler og lokalsamfund</h3><p>Skabe engagement i skoler og lokalsamfund.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Museer og forskere</h3><p>Udvide samarbejder med museer og forskere.</p></div></div>
+        <div class="card"><div class="dot"></div><div><h3>Interaktiv historisk undervisning</h3><p>Blive Danmarks førende platform for interaktiv historisk undervisning.</p></div></div>
+      </div>
+    </div>
+    <div class="imgbox" aria-hidden="true">
+      <!-- Simple placeholder illustration -->
+      <svg viewBox="0 0 800 400" role="img" aria-label="Silhouette illustration">
+        <rect x="0" y="0" width="800" height="400" fill="none" stroke="currentColor" opacity="0.15"/>
+        <circle cx="240" cy="250" r="60" fill="currentColor" opacity=".1"/>
+        <circle cx="420" cy="210" r="90" fill="currentColor" opacity=".12"/>
+        <rect x="140" y="280" width="520" height="10" fill="currentColor" opacity=".18"/>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="22" fill="currentColor" opacity=".45">Add your own image here</text>
+      </svg>
     </div>
   </section>
 
